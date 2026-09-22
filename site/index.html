@@ -87,10 +87,10 @@ h1,h2,h3,.display{font-family:'Rajdhani',sans-serif;text-transform:uppercase;let
   animation:kick2 4.6s ease-in-out infinite;
 }
 @keyframes kick2{
-  0%,47%{opacity:0;transform:rotate(0deg);}
-  51%{opacity:1;transform:rotate(-32deg);}
-  57%{opacity:1;transform:rotate(10deg);}
-  63%,100%{opacity:0;transform:rotate(0deg);}
+  0%,47%{opacity:0;transform:scaleX(-1) rotate(0deg);}
+  51%{opacity:1;transform:scaleX(-1) rotate(-32deg);}
+  57%{opacity:1;transform:scaleX(-1) rotate(10deg);}
+  63%,100%{opacity:0;transform:scaleX(-1) rotate(0deg);}
 }
 .shot-ball{
   position:absolute;z-index:1;left:36%;bottom:7%;
@@ -543,11 +543,11 @@ footer{
 .hoop::after{
   content:'';position:absolute;inset:8px;border:2px dashed color-mix(in oklch, var(--gold) 70%, transparent);border-radius:50%;
 }
-.kick-foot{position:absolute;bottom:4px;left:10px;font-size:2.2rem;animation:foot-swing 2.6s ease-in-out infinite;}
+.kick-foot{position:absolute;bottom:4px;left:10px;font-size:2.2rem;transform:scaleX(-1);animation:foot-swing 2.6s ease-in-out infinite;}
 @keyframes foot-swing{
-  0%,60%,100%{transform:rotate(0deg);}
-  68%{transform:rotate(-28deg);}
-  76%{transform:rotate(6deg);}
+  0%,60%,100%{transform:scaleX(-1) rotate(0deg);}
+  68%{transform:scaleX(-1) rotate(-28deg);}
+  76%{transform:scaleX(-1) rotate(6deg);}
 }
 .kick-ball{
   position:absolute;bottom:22px;left:34px;font-size:1.7rem;
